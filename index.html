@@ -22,25 +22,16 @@
 
     
     <script src="jQCloud/dist/jqcloud.css"></script>
-    <!--- <script src="jQCloud/dist/jquery.min.js"></script>
-    <script src="jQCloud/angular.min.js"></script>
-    -->
     <script src="jQCloud/dist/jqcloud.min.js"></script>
     <script src="angular-jqcloud/angular-jqcloud.js"></script>
 
 </head>
 
 <body ng-app="app" ng-controller="controller">
-    <div class="top">
+    <div class="top shadow">
          <p class="text">
-                <img src="Imagens/Logo/logo.png" width="10%">
-           <b>SAÚDE DA MULHER</b> 
-           <i class="fa fa-search" style=" float: right; padding-top: 50px;
-           padding-right: 100px;
-           padding-left: 80px;
-           cursor: pointer;
-           "
-           onclick="openSearch()" ></i>
+                <img src="Imagens/Logo/logo2.png" class="logo">
+           <i class="fa fa-search" onclick="openSearch()" ></i>
         </p>
         
        
@@ -54,15 +45,13 @@
               </form>
             </div>
           </div>
-    <!--- rgba(86,61,124,.15)
-    -->
    <script>
  var app = angular.module('app', [
     'angular-jqcloud'
   ]);
   app.controller('controller', function($scope) {
     $scope.words = [
-      {text: "Lorem", weight: 13, link: 'http://github.com/mistic100/jQCloud'},
+      {text: "Lorem", weight: 13, link: '../Saude_Da_Mulher/artigos/artigos.html'},
       {text: "Ipsum", weight: 10.5,link: 'http://github.com/mistic100/jQCloud'},
       {text: "Dolor", weight: 9.4,link: 'http://github.com/mistic100/jQCloud'},
       {text: "Sit", weight: 8,link: 'http://github.com/mistic100/jQCloud'},
@@ -104,6 +93,7 @@
   });
 });
 </script>
+
         <jqcloud words="words" width="500" height="350" colors="{{colors}}" delay="10" steps="7" font-size="{from:0.09, to:0.04}"></jqcloud>
 
 </body>
