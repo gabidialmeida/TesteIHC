@@ -2,99 +2,98 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="Imagens/Logo/logo.png" sizes="200x200" />
-    <title>Saúde da Mulher</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" href="Imagens/Logo/logo.png" sizes="200x200" />
+  <title>Saúde da Mulher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    
-    <script src="jQCloud/dist/jqcloud.css"></script>
-    <script src="jQCloud/dist/jqcloud.min.js"></script>
-    <script src="angular-jqcloud/angular-jqcloud.js"></script>
+
+  <script src="jQCloud/dist/jqcloud.css"></script>
+  <script src="jQCloud/dist/jqcloud.min.js"></script>
+  <script src="angular-jqcloud/angular-jqcloud.js"></script>
 
 </head>
 
 <body ng-app="app" ng-controller="controller">
-    <div class="top shadow">
-         <p class="text">
-                <img src="Imagens/Logo/logo2.png" class="logo">
-           <i class="fa fa-search" onclick="openSearch()" ></i>
-        </p>
-        
-       
+  <div class="img_bg"></div>
+  <div class="top shadow">
+    <img src="Imagens/Logo/logo2.png" class="logo">
+    <i class="fa fa-search" onclick="openSearch()" style="cursor: pointer;"></i>
+  </div>
+  <div id="myOverlay" class="overlay">
+    <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+    <div class="overlay-content">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
     </div>
-    <div id="myOverlay" class="overlay">
-            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
-            <div class="overlay-content">
-              <form action="/action_page.php">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-            </div>
-          </div>
-   <script>
- var app = angular.module('app', [
-    'angular-jqcloud'
-  ]);
-  app.controller('controller', function($scope) {
-    $scope.words = [
-      {text: "Lorem", weight: 13, link: '../Saude_Da_Mulher/artigos/artigos.html'},
-      {text: "Ipsum", weight: 10.5,link: 'http://github.com/mistic100/jQCloud'},
-      {text: "Dolor", weight: 9.4,link: 'http://github.com/mistic100/jQCloud'},
-      {text: "Sit", weight: 8,link: 'http://github.com/mistic100/jQCloud'},
-      {text: "Amet", weight: 6.2,link: 'http://github.com/mistic100/jQCloud'},
-      {text: "Consectetur", weight: 5},
-      {text: "Adipiscing", weight: 5},
-      {text: "Elit", weight: 5},
-      {text: "Nam et", weight: 5},
-      {text: "Leo", weight: 4},
-      {text: "Sapien", weight: 4},
-      {text: "Pellentesque", weight: 3},
-      {text: "habitant", weight: 3},
-      {text: "morbi", weight: 3},
-      {text: "tristisque", weight: 3},
-      {text: "senectus", weight: 3},
-      {text: "et netus", weight: 3},
-      {text: "et malesuada", weight: 3},
-      {text: "fames", weight: 2},
-      {text: "ac turpis", weight: 2},
-      {text: "egestas", weight: 2},
-      {text: "Aenean", weight: 2},
-      {text: "vestibulum", weight: 2},
-      {text: "elit", weight: 2},
-      {text: "sit amet", weight: 2},
-      {text: "metus", weight: 2},
-      {text: "adipiscing", weight: 2},
-      {text: "ut ultrices", weight: 2}
-    ];
-    
-    $scope.colors = ["#800026", "#bd0026", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976"];
-    
-    $scope.update = function() {
-      $scope.words.splice(-5);
-    };
-  });
-  $(document).ready(function(){
-  $('.jqcloud-word').mouseover(function(){
-    $('.jqcloud-word').css("background-color", "yellow");
-  });
-});
-</script>
+  </div>
+  <script>
+    var app = angular.module('app', [
+      'angular-jqcloud'
+    ]);
+    app.controller('controller', function ($scope) {
+      $scope.words = [
+        { text: "Lorem", weight: 100, link: '../Saude_Da_Mulher/artigos/artigos.html' },
+        { text: "Ipsum", weight: 20, link: 'http://github.com/mistic100/jQCloud' },
+        { text: "Dolor", weight: 9.4, link: 'http://github.com/mistic100/jQCloud' },
+        { text: "Sit", weight: 8, link: 'http://github.com/mistic100/jQCloud' },
+        { text: "Amet", weight: 6.2, link: 'http://github.com/mistic100/jQCloud' },
+        { text: "Consectetur", weight: 5 },
+        { text: "Adipiscing", weight: 5 },
+        { text: "Elit", weight: 5 },
+        { text: "Nam et", weight: 5 },
+        { text: "Leo", weight: 4 },
+        { text: "Sapien", weight: 4 },
+        { text: "Pellentesque", weight: 3 },
+        { text: "habitant", weight: 3 },
+        { text: "morbi", weight: 3 },
+        { text: "tristisque", weight: 3 },
+        { text: "senectus", weight: 3 },
+        { text: "et netus", weight: 3 },
+        { text: "et malesuada", weight: 3 },
+        { text: "fames", weight: 2 },
+        { text: "ac turpis", weight: 2 },
+        { text: "egestas", weight: 2 },
+        { text: "Aenean", weight: 2 },
+        { text: "vestibulum", weight: 2 },
+        { text: "elit", weight: 2 },
+        { text: "sit amet", weight: 2 },
+        { text: "metus", weight: 2 },
+        { text: "adipiscing", weight: 2 },
+        { text: "ut ultrices", weight: 2 }
+      ];
 
-        <jqcloud words="words" width="500" height="350" colors="{{colors}}" delay="10" steps="7" font-size="{from:0.09, to:0.04}"></jqcloud>
+      $scope.colors = ["#800026", "#bd0026", "#e31a1c", "#fc4e2a", "#fd8d3c", "#feb24c", "#fed976"];
+
+      $scope.update = function () {
+        $scope.words.splice(-5);
+      };
+    });
+    $(document).ready(function () {
+      $('.jqcloud-word').mouseover(function () {
+        $('.jqcloud-word').css("background-color", "yellow");
+      });
+    });
+  </script>
+<div class="palavras">
+  <jqcloud words="words" width="500" height="350" colors="{{colors}}" delay="10" steps="7" font-size="{from:0.09, to:0.04}"></jqcloud>
+
+</div>
 
 </body>
 
