@@ -66,7 +66,7 @@ p.text
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
-/* .fa {
+.fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 30px !important;
@@ -78,17 +78,14 @@ p.text
 .fa-search{
   float: right;
   padding-top: 20px;
-  /* padding-bottom: .75rem; 
+  /* padding-bottom: .75rem; */
   padding-right: 100px;
   padding-left: 80px;
   color: #ffffff;
-} */
+}
 
 .palavras{
-  /* padding-top: 25%;padding-left: 30%; */
-  padding-top: 5%;
-  align-content: center;
-  
+  padding-top: 80px;
 }
 
 .jqcloud{
@@ -287,27 +284,24 @@ p.text
     color: #ffffff !important;
   }
   
- ul.tx3-tag-cloud {
-}
-ul.tx3-tag-cloud li {
-display: block;
-float: left;
-list-style: none;
-margin-right: 4px;
-}
-ul.tx3-tag-cloud li a {
-display: block;
-text-decoration: none;
-color: #6f2f53;
-padding: 3px 10px;
-}
-ul.tx3-tag-cloud li a:hover {
-color: #000000;
--webkit-transition: color 250ms linear;
--moz-transition: color 250ms linear;
--o-transition: color 250ms linear;
--ms-transition: color 250ms linear;
-transition: color 250ms linear;
-}
-
+  ul.tx3-tag-cloud li {
+    display: block;
+    float: left;
+    list-style: none;
+    margin-right: 4px;
+    }
+    ul.tx3-tag-cloud li a {
+    display: block;
+    text-decoration: none;
+    color: #6f2f53;
+    padding: 3px 10px;
+    }
+    ul.tx3-tag-cloud li a:hover {
+    color: #000000;
+    -webkit-transition: color 250ms linear;
+    -moz-transition: color 250ms linear;
+    -o-transition: color 250ms linear;
+    -ms-transition: color 250ms linear;
+    transition: color 250ms linear;
+    }
   

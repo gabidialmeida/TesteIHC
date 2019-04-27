@@ -85,10 +85,9 @@ p.text
 } */
 
 .palavras{
-  /* padding-top: 25%;padding-left: 30%; */
-  padding-top: 5%;
+  padding-top: 80px;
   align-content: center;
-  
+  padding-left: 300;
 }
 
 .jqcloud{

@@ -14,11 +14,14 @@
   <script src="main.js"></script>
   <script src="./node_modules/angular/angular.js"></script>
 
-  <!-- <script src="jQCloud/dist/jqcloud.css"></script>
+  <script src="jQCloud/dist/jqcloud.css"></script>
   <script src="jQCloud/dist/jqcloud.min.js"></script>
-  <script src="angular-jqcloud/angular-jqcloud.js"></script> -->
+  <script src="angular-jqcloud/angular-jqcloud.js"></script>
   
   <link href="./modais/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="./modais/css/modalCss.css" rel="stylesheet" type="text/css">
+  <link href="./modais/css/tx3-tag-cloud.css" rel="stylesheet" type="text/css">
+
   <script type="text/javascript" src="./modais/js/jquery.js" ></script>
   <script type="text/javascript" src="./modais/js/bootstrap.min.js" ></script>
 </head>
@@ -50,7 +53,7 @@
     </div>
   </div>
 <div class="palavras">
-  <ul id="tagcloud" style="">
+  <ul id="tagcloud" style="margin:70px;" class="tx3-tag-cloud">
     <li data-weight="50"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="0">Exames de rotina</a></li>
     <li data-weight="24"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="1">Infertilidade</a></li>
     <li data-weight="32"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="2">Doenças Femininas</a></li>
@@ -64,16 +67,11 @@
     <li data-weight="40"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="10">Parto</a></li>
     <li data-weight="38"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="11">Ginecologista</a></li>
     <li data-weight="47"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="12">Anticocepcional</a></li>
-    <li data-weight="50"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="0">Exames de rotina</a></li>
-    <li data-weight="24"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="1">Infertilidade</a></li>
-    <li data-weight="32"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="2">Doenças Femininas</a></li>
-    <li data-weight="60"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="3">Menopausa</a></li>
-    
     </ul>
 </div>
 
-<script src="./node_modules/jquery/dist/jquery.min.js"></script> 
-<script type="text/javascript" src="jquery.txt3-tag-cloud.js" ></script> 
+<script src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.tx3-tag-cloud.js" ></script> 
 <script>
   $(document).ready(function(){
   $("#tagcloud").tx3TagCloud({
