@@ -8,8 +8,7 @@
   <title>Saúde da Mulher</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
+
   <script src="./node_modules/jquery/dist/jquery.min.js"></script>
   <script src="main.js"></script>
   <script src="./node_modules/angular/angular.js"></script>
@@ -18,13 +17,13 @@
   <script src="jQCloud/dist/jqcloud.min.js"></script>
   -->
   <script src="./node_modules/feather-icons/dist/feather.js"></script>
-  <link href="./modais/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="./modais/js/jquery.js"></script>
-  <script type="text/javascript" src="./modais/js/bootstrap.min.js"></script>
+  <link href="./node_modules/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="./node_modules/js/jquery.js"></script>
+  <script type="text/javascript" src="./node_modules/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <div class="img_bg"></div>
+  <div class="img_bg" id="background_imagem"></div>
   <div class="top shadow">
     <img src="Imagens/Logo/logo2.png" class="logo">
     <i data-feather="search" onclick="openSearch()" style="cursor: pointer;" class="eye"></i>
@@ -45,17 +44,16 @@
       <h1 class="texto_busca">Busque as informações sobre as doenças comuns para essa faixa etária</h1>
       <div class="d-flex justify-content-center" style="padding-top: 10px;">
         <div class="select_list">
-          <select class="form-control filtro">
+          <select class="form-control filtro" id="select_filtro" onchange="faixaEtariaSelecionada()">
             <option value="0">Selecione uma faixa etária:</option>
-            <option value="menos_15">
-              < 15</option>
-                <option value="15a30">15|-30</option>
-                <option value="30a45">30|-45</option>
-                <option value="45a60">45|-60</option>
-                <option value="mais60"> > 60</option> </select>
+            <option value="1"> < 15</option>
+                <option value="2">15|-30</option>
+                <option value="3">30|-45</option>
+                <option value="4">45|-60</option>
+                <option value="5"> > 60</option> </select>
         </div>
         <div class="">
-          <button class="btn btn-primary busca">Buscar</button>
+               <button class="btn btn-primary busca" onclick="validaFiltro()" title="Header" data-toggle="popover" data-placement="bottom" data-content="Content">Buscar</button>
         </div>
       </div>
 
@@ -66,9 +64,9 @@
   </div>
   <div class="palavras">
     <ul id="tagcloud" style="">
-      <li data-weight="50"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="0">Exames
+      <li data-weight="50"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="0" onmouseover="changeBg('img2')">Exames
           de rotina</a></li>
-      <li data-weight="24"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="1">Infertilidade</a></li>
+      <li data-weight="24"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="1" onmouseover="changeBg('img_bg')" >Infertilidade</a></li>
       <li data-weight="32"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="2">Doenças
           Femininas</a></li>
       <li data-weight="60"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="3">Menopausa</a></li>

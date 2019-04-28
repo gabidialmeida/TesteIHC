@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../Imagens/Logo/logo.png" sizes="200x200" />
+    <title>Saúde da Mulher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../busca/busca.css" />
+    <script src="../busca/busca.js"></script>
+
+
+
+</head>
+
+<body>
+    
+    <div class="img_bg"></div>
+    <div class="top shadow">
+        <img src="../Imagens/Logo/logo2.png" class="logo">
+        <i class="fa fa-search" onclick="openSearch()" style="cursor: pointer;"></i>
+    </div>
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <!--       <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form> -->
+            <h1 class="texto_busca">Busque as informações sobre as doenças comuns para essa faixa etária</h1>
+            <select>
+                <option value="0">Selecione uma faixa etária:</option>
+                <option value="menos_15">
+                    < 15</option>
+                        <option value="15a30">15 |-30</option>
+                        <option value="30a45">30 |-45</option>
+                        <option value="45a60">45 |-60</option>
+                        <option value="mais60"> > 60</option>
+
+            </select>
+            <button class="button_busca">Buscar</button>
+        </div>
+    </div>
+    
+    <button class="collapsible">Open Collapsible</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    
+    <p>Collapsible Set:</p>
+    <button class="collapsible">Open Section 1</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Open Section 2</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <button class="collapsible">Open Section 3</button>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js" ></script>
+
+</body>
+</html>

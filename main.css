@@ -353,7 +353,7 @@ color: white;
   width: 24px;
   height: 24px;
   stroke: currentColor;
-  stroke-width: 2;
+  stroke-width: 3.5px;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
@@ -361,4 +361,10 @@ color: white;
   float: right;
   margin: 20px;
   margin-right: 60px;
+}
+
+.error_busca{
+  box-shadow: 0 4px 8px 0 rgba(224, 11, 11, 0.37), 0 6px 20px 0 rgba(224, 11, 11, 0.548) !important;
+border-color: rgba(224, 11, 11, 0.87)  !important;
+border-width: 1px !important;
 }

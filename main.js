@@ -48,6 +48,7 @@ function openSearch() {
   
   function closeSearch() {
     document.getElementById("myOverlay").style.display = "none";
+    resetBusca();
   }
 
   (function($)
@@ -126,3 +127,44 @@ function openSearch() {
 function resetImageModalPath(){
   document.getElementById('image').src = "./Imagens/Modal/";	
 }
+function changeBg(image)
+{
+  var last=$('#background_imagem').attr('class');
+  $('#background_imagem').removeClass(last);
+  $('#background_imagem').addClass(image);
+   
+}
+
+function validaFiltro (){
+  var faixaSelecionada = document.getElementById('select_filtro').value;
+  //console.log (faixaSelecionada);
+  if(faixaSelecionada == '0')
+  {
+    $('#select_filtro').addClass('error_busca');
+    setTimeout(function(){ alert("É necessário selecionar uma faixa etária para realizar a busca :)"); }, 150);
+
+  }
+}
+function faixaEtariaSelecionada()
+{
+  var faixaSelecionada = document.getElementById('select_filtro').value;
+  if(faixaSelecionada != '0' && $('#select_filtro').hasClass('error_busca'))
+  {
+    $('#select_filtro').removeClass('error_busca');
+  }
+}
+function resetBusca()
+{
+  if($('#select_filtro').hasClass('error_busca'))
+  {
+    $('#select_filtro').removeClass('error_busca');
+  }
+  document.getElementById('select_filtro').value='0';
+}
+$('form').submit(function(){
+  var e = document.getElementById("itemSelected");
+  var codeSearch = e.options[e.selectedIndex].id;
+
+   $(this).attr('action',$(this).attr('action')+ codeSearch);
+   $(this).submit();
+});
