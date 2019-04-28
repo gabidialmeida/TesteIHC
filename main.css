@@ -56,7 +56,7 @@ p.text
 .logo{
   width: 100px;
   padding-left: 20px;
-  padding-top: 10px;
+  padding-top: 7px;
 }
 
 .shadow {
@@ -66,7 +66,7 @@ p.text
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
 }
 
-.fa {
+ .fa {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: 30px !important;
@@ -82,10 +82,24 @@ p.text
   padding-right: 100px;
   padding-left: 80px;
   color: #ffffff;
+} 
+
+.eye {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  color: #ccc
 }
 
 .palavras{
-  padding-top: 80px;
+  /* padding-top: 25%;padding-left: 30%; */
+  padding-top: 5%;
+  align-content: center;
+  
 }
 
 .jqcloud{
@@ -240,3 +254,111 @@ p.text
     color: #ff000d !important;
     cursor: pointer; 
   }
+ .image_modal{
+    background-color: #ddd;
+    border-radius: 100%;
+    height: 300px;
+    object-fit: cover;
+    width: 300px;  
+    margin:16%;
+  }
+  
+  .box{
+    display: inline-block;
+    width: 40%;
+    box-sizing: inherit;
+  }
+  
+  .box p{
+    margin: 0;
+      width: 450px;
+    margin-top:21px;
+    box-sizing: inherit;
+  }
+  
+  .boxes{
+    flex-wrap: nowrap;
+    display: flex;
+    padding-top: 1rem!important;
+    box-sizing: inherit;
+  }
+  
+  @media (max-width: 360px){
+    .image_modal{
+      background-color: #ddd;
+      border-radius: 100%;
+      height: 300px;
+      object-fit: cover;
+      width: 300px;  
+      margin:3%;
+    }
+  }
+  
+  a:hover{
+    color: #ffffff !important;
+  }
+  
+ ul.tx3-tag-cloud {
+}
+ul.tx3-tag-cloud li {
+display: block;
+float: left;
+list-style: none;
+margin-right: 4px;
+}
+ul.tx3-tag-cloud li a {
+display: block;
+text-decoration: none;
+color: #6f2f53;
+padding: 3px 10px;
+}
+ul.tx3-tag-cloud li a:hover {
+color: #000000;
+-webkit-transition: color 250ms linear;
+-moz-transition: color 250ms linear;
+-o-transition: color 250ms linear;
+-ms-transition: color 250ms linear;
+transition: color 250ms linear;
+}
+
+.busca_button{
+    /* margin-left: 50%; */
+    margin-top: 10px;
+    /* margin-right: auto; */
+    /* display: block; */
+    
+}
+.select_list{
+  margin-top: 7px;
+}
+
+.btn.btn-primary.busca
+{
+  margin-left: 50px;
+  background: rgb(172, 33, 84) !important;
+  width: 150px;
+}
+.form-control.filtro{
+  height: 40px !important;
+  width: 400px !important;
+ 
+}
+
+.texto_busca{
+  font-weight: 500;
+color: white;
+}
+
+.feather.eye {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  color: white;
+  float: right;
+  margin: 20px;
+  margin-right: 60px;
+}
