@@ -84,6 +84,18 @@ p.text
   color: #ffffff;
 } */
 
+.eye {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  color: #ccc
+}
+
+
 .palavras{
   /* padding-top: 25%;padding-left: 30%; */
   padding-top: 5%;
@@ -310,4 +322,51 @@ color: #000000;
 transition: color 250ms linear;
 }
 
+.busca_button{
+  /* margin-left: 50%; */
+  margin-top: 10px;
+  /* margin-right: auto; */
+  /* display: block; */
   
+}
+.select_list{
+margin-top: 7px;
+}
+
+.btn.btn-primary.busca
+{
+margin-left: 50px;
+background: rgb(172, 33, 84) !important;
+width: 150px;
+}
+.form-control.filtro{
+height: 40px !important;
+width: 400px !important;
+
+}
+
+.texto_busca{
+font-weight: 500;
+color: white;
+}
+
+.feather.eye {
+width: 24px;
+height: 24px;
+stroke: currentColor;
+stroke-width: 3.5px;
+stroke-linecap: round;
+stroke-linejoin: round;
+fill: none;
+color: white;
+float: right;
+margin: 20px;
+margin-right: 60px;
+}
+
+.error_busca{
+box-shadow: 0 4px 8px 0 rgba(224, 11, 11, 0.37), 0 6px 20px 0 rgba(224, 11, 11, 0.548) !important;
+border-color: rgba(224, 11, 11, 0.87)  !important;
+border-width: 1px !important;
+}
+
