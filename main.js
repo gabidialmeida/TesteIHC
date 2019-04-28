@@ -56,6 +56,7 @@ function openSearch() {
  });
 
  function setaDadosModal(id) {
+    console.log(modais.tips[id]);
     document.getElementById('title').innerHTML = modais.tips[id].title;
     document.getElementById('text').innerHTML = modais.tips[id].text;	
     document.getElementById('image').src += modais.tips[id].image;	

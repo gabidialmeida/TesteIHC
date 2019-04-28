@@ -18,18 +18,21 @@
   <script src="jQCloud/dist/jqcloud.min.js"></script>
   <script src="angular-jqcloud/angular-jqcloud.js"></script> -->
   
-  <link href="./modais/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="./modais/js/jquery.js" ></script>
-  <script type="text/javascript" src="./modais/js/bootstrap.min.js" ></script>
+  <link href="./Modal/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="./Modal/jquery.js" ></script>
+  <script type="text/javascript" src="./Modal/bootstrap.min.js" ></script>
 </head>
 
 <body>
   <div class="img_bg"></div>
   <div class="top shadow">
     <img src="Imagens/Logo/logo2.png" class="logo">
-    <i class="fa fa-search" onclick="openSearch()" style="cursor: pointer;"></i>
-  </div>
-  <div id="myOverlay" class="overlay">
+    <!-- <i class="fa fa-search" onclick="openSearch()" style="cursor: pointer;"></i> -->
+    <button class="btn btn-primary" onclick="openSearch()">
+      Buscar        
+    </button>
+  </div>  
+  <form id="myOverlay" class="overlay" action="./SearchItem.html" method="GET">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
     <div class="overlay-content">
 <!--       <form action="/action_page.php">
@@ -37,18 +40,18 @@
         <button type="submit"><i class="fa fa-search"></i></button>
       </form> -->
     <h1 class="texto_busca">Busque as informações sobre as doenças comuns para essa faixa etária</h1>  
-      <select>
+      <select name="itemSelected" id="itemSelected"> 
           <option value="0">Selecione uma faixa etária:</option>
-          <option value="menos_15"> < 15</option>
-          <option value="15a30">15|-30</option>
-          <option value="30a45">30|-45</option>
-          <option value="45a60">45|-60</option>
-          <option value="mais60"> > 60</option>
+          <option value="1"> < 15</option>
+          <option value="2">15|-30</option>
+          <option value="3">30|-45</option>
+          <option value="4">45|-60</option>
+          <option value="5"> > 60</option>
  
         </select>
-        <button class="button_busca">Buscar</button>
+        <button class="button_busca" onclick="setaDadosSearchItem(this.id);">Buscar</button>
     </div>
-  </div>
+  </form>
 <div class="palavras">
   <ul id="tagcloud" style="">
     <li data-weight="50"><a data-toggle="modal" data-target="#modal" href="#" onclick="setaDadosModal(this.id);" id="0">Exames de rotina</a></li>
@@ -79,6 +82,14 @@
   $("#tagcloud").tx3TagCloud({
     multiplier: 5
   });
+});
+
+$('form').submit(function(){
+  var e = document.getElementById("itemSelected");
+  var codeSearch = e.options[e.selectedIndex].id;
+
+   $(this).attr('action',$(this).attr('action')+ codeSearch);
+   $(this).submit();
 });
 </script>
 

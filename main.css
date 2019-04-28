@@ -14,7 +14,7 @@ body
 }
 
 .img_bg{
-  background-image: url(../Saude_Da_Mulher/Imagens/Home/home1.jpg);
+  background-image: url(./Imagens/Home/femaleHealth.jpg);
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover; /* Resize the background image to cover the entire container */
   width: 100%;
@@ -31,7 +31,7 @@ background-size: cover; /* Resize the background image to cover the entire conta
   z-index: -1;   
 }
 .img2{
-  background-image: url(../Saude_Da_Mulher/Imagens/Home/home2.jpg);
+  background-image: url(./Imagens/Home/home2.jpg);
 background-repeat: no-repeat; /* Do not repeat the image */
 background-size: cover; /* Resize the background image to cover the entire container */
   width: 100%;
